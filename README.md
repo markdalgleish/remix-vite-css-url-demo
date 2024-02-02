@@ -52,7 +52,7 @@ When `build.cssMinify` is enabled, `app/main.css` will be compiled into:
 
 ## Credit
 
-Thanks [@safi-red](https://github.com/sapphi-red) for getting this feature into Vite!
+Thanks [@sapphi-red](https://github.com/sapphi-red) for getting this feature into Vite!
 
 ## License
 
