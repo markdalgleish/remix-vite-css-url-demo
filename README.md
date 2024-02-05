@@ -25,7 +25,12 @@ To use Vite's `.css?url` feature, there are some additional requirements.
 Firstly, you must be using Vite `v5.1.0-beta.0` or later.
 
 Secondly, you'll also need to enable `build.cssMinify` in your Vite config.
-This will be handled automatically in a future version of Remix, but for now you'll need to enable this setting manually:
+
+> [!NOTE]
+>
+> [This will be handled automatically in a future version of Remix.](https://github.com/remix-run/remix/pull/8684)
+>
+> In the meantime you'll need to enable this setting manually.
 
 ```ts
 import { unstable_vitePlugin as remix } from "@remix-run/dev";
