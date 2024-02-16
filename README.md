@@ -1,6 +1,10 @@
 # Remix + Vite + `.css?url` demo
 
-This is a demo of how to use [Remix](https://remix.run) with [Vite's](https://vitejs.dev) new [`.css?url` feature](https://github.com/vitejs/vite/pull/15259) which is [currently in beta.](https://github.com/vitejs/vite/blob/main/packages/vite/CHANGELOG.md#510-beta0-2024-01-15)
+This is a demo of how to use [Remix](https://remix.run) with [Vite's](https://vitejs.dev) new [`.css?url` feature](https://github.com/vitejs/vite/pull/15259).
+
+> [!NOTE]
+>
+> This demo is currently using a nightly release of Remix. This is not required if you enable `build.cssMinify` in your Vite config.
 
 ## Getting started
 
@@ -18,19 +22,15 @@ pnpm build
 pnpm start
 ```
 
-## Project requirements
+## Vite compatibility
 
-To use Vite's `.css?url` feature, there are some additional requirements.
+You must be using Vite `v5.1.0` or later, otherwise your CSS won't build correctly for production if it uses any of Vite's CSS processing features or plugins.
 
-Firstly, you must be using Vite `v5.1.0-beta.0` or later.
+## Remix compatibility
 
-Secondly, you'll also need to enable `build.cssMinify` in your Vite config.
+Remix's upcoming v2.7.0 release includes built-in support for Vite's `.css?url` feature. This repo is using a nightly release of Remix (`0.0.0-nightly-3da950a-20240215`) that already includes the [relevant code changes](https://github.com/remix-run/remix/pull/8684).
 
-> [!NOTE]
->
-> [This will be handled automatically in a future version of Remix.](https://github.com/remix-run/remix/pull/8684)
->
-> In the meantime you'll need to enable this setting manually.
+If you're running Remix v2.6.0 or earlier you'll need to enable `build.cssMinify` in your Vite config:
 
 ```ts
 import { unstable_vitePlugin as remix } from "@remix-run/dev";
